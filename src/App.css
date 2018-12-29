@@ -1,32 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*header sizing based on musical scale 😀*/
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.7411em; }
+h3 { font-size: 1.5157em; }
+h4 { font-size: 1.3195em; }
+h5 { font-size: 1.1487em; }
+h6 { font-size: 1.0em; }
+
+body {
+  font-size: 1.1em;
+  line-height: 1.4em;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
+  background: rgb(254,255,255); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 ); /* IE6-9 */
+}
+
 .App {
+  padding: 2em 0 4em 0;
+  height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.movie-app {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movie-search {}
+
+.movie-search-input {
+  width: 100%;
+  height: 2em;
+  box-shadow: 0 2px 4px #FFFFFF;
+  text-align: center;
+  font-size: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-search-btns {
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-btns {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #FFFFFF;
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+.search-btn {
+  background-color: #2275CE;
+}
+
+.reset-btn {
+  background-color: #B71D27;
+}
+
+.movie {}
+
+.movie-poster {}
+
+.movie-title {
+  padding: 0.5em;
+}
+
+.movie-year { padding-bottom: 1em; }
+
+.movie-plot {
+  padding: 1em 0;
+}
+
+.movie-peeps {
+  padding: 1em;
+  text-align: left;
 }

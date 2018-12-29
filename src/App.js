@@ -24,10 +24,10 @@ class App extends Component {
   }
   search() {
     var that = this
-    axios.get(`http://www.omdbapi.com/?apikey=YOUR_KEY_HERE&t=${this.state.searchTerm}`)
+    axios.get(`http://www.omdbapi.com/?apikey=55cc1c7b&t=${this.state.searchTerm}`)
       /*eslint no-undef: 1*/
       .then(function (response) {
-        that.setState({ movieData: response.data})
+        that.setState({ movieData: response.data })
       })
       .catch(function (error) {
         console.log('ACK! : ', error)
@@ -42,15 +42,18 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <div className="appSearch">
+      <div className="App movie-app">
+        <div className="movie-search">
           <input
+            className="movie-search-input"
             type="text"
             value={this.state.searchTerm}
             onChange={this.handleChange}
           />
-          <button onClick={this.search}>Search</button>
-          <button onClick={this.reset}>Reset</button>
+        </div>
+        <div className="movie-search-btns">
+          <button onClick={this.search} className="movie-btns search-btn">Search</button>
+          <button onClick={this.reset} className="movie-btns reset-btn">Reset</button>
         </div>
         <Movie data={this.state.movieData} />
       </div>
